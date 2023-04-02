@@ -15,9 +15,9 @@ const Header = () => {
   }
   return (
     <div id="header">
-      <Button onClick={() => OnClickMainContent('Button One')} text="Button One" />
-      <Button onClick={() => OnClickMainContent('Button Two I think')} text="Button Two" />
-      <Button onClick={() => OnClickMainContent('No idea!')} text="Button Three" />
+      <Button onClick={() => OnClickMainContent('Home')} text="Home" />
+      <Button onClick={() => OnClickMainContent('About')} text="About" />
+      <Button onClick={() => OnClickMainContent('Project')} text="Project" />
       <Button onClick={() => OnClickMainContent('Button Button')} text="Button Four" />
       <Button onClick={() => OnClickMainContent('Button Wow!')} text="Button Five" />
       <Button onClick={() => OnClickMainContent('Button Help')} text="Button Six" />

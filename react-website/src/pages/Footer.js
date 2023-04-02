@@ -7,9 +7,12 @@ const Footer = () => {
 
     const{mainContent} = useContext(MainContentContext)
 
+
+
     return (
         <div id="header">This is the footer
         <p>{mainContent}</p>
+        <p></p>
         </div>
         
 
