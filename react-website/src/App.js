@@ -1,24 +1,25 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route} 
-  from 'react-router-dom';
-import About from './pages/about';
-import Home from './pages/home';
-import Header from './pages/header';
-import Footer from './pages/footer';
+import {
+  BrowserRouter,
+  Routes, // instead of "Switch"
+  Route,
+} from "react-router-dom";
+import About from './pages/About';
+import Home from './pages/Home';
+import Header from './pages/Header';
+import Footer from './pages/Footer';
 
 
 function App() {
   return (
     <div>
       <Header />
-    <Router>
-      <Routes>
+      <BrowserRouter>
+        <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-
-      </Routes>
-      
-      </Router>
+        </Routes>
+      </BrowserRouter>
       <Footer />
       </div>
   );
