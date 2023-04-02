@@ -8,10 +8,19 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Header from './pages/Header';
 import Footer from './pages/Footer';
+import { createContext, useState } from 'react';
 
+export const MainContentContext = createContext();
 
 function App() {
+  const [mainContent, setMainContent] = useState('Apps Default');
+
+  function updateMainContent(newContent) {
+    setMainContent(newContent);
+  }
+
   return (
+    <MainContentContext.Provider value={{ mainContent, updateMainContent }}>
     <div>
       <Header />
       <BrowserRouter>
@@ -22,6 +31,7 @@ function App() {
       </BrowserRouter>
       <Footer />
       </div>
+      </MainContentContext.Provider>
   );
 }
 
