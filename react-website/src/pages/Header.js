@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { MainContentContext } from "../App";
 import "../App.css";
 import { Button } from '../components/Button'
 
 
 const Header = () => {
 
-  const [mainContent, setMainContent] = useState('Default content');
+  const [mainText, setMainText] = useState('Default content');
+  const { updateMainContent } = useContext(MainContentContext);
 
   const OnClickMainContent = (props) => {
-    setMainContent(props);
+    updateMainContent(props);
+    setMainText(props)
   }
   return (
     <div id="header">
@@ -19,7 +22,7 @@ const Header = () => {
       <Button onClick={() => OnClickMainContent('Button Wow!')} text="Button Five" />
       <Button onClick={() => OnClickMainContent('Button Help')} text="Button Six" />
       <Button onClick={() => OnClickMainContent('Button Jesus!')} text="Button Seven" />
-      <div>{mainContent}</div>
+      <div>{mainText}</div>
       </div>
   );
 };
