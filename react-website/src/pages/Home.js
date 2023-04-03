@@ -1,15 +1,18 @@
 import React from "react";
 
-const Home = () => {
-return (
+import '../App.css';
 
-	<div>
+const Home = ({ handleClick }) => {
+	const onClick = () => {
+	  handleClick('project');
+	}
+  
+	return (
+	  <div className="home">
 		<h1>THIS IS THE HOME PAGE ELEMENT</h1>
-		<button>This is the button</button>
-	</div>
-	
-	
-);
-};
+		<button onClick={onClick}>Update MainText State to 'Project'</button>
+	  </div>
+	);
+  };
 
 export default Home;

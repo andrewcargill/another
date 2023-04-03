@@ -13,22 +13,19 @@ const Header = () => {
   const onClickMainContent = (props) => {
     // updateMainContent(props);
     setMainText(props)
-    console.log(mainText)
   };
 
   return (
     <div id="header">
       
-      <Button onClick={() => onClickMainContent('Home')} text="Project" />
-      <Button onClick={() => onClickMainContent('Button Button')} text="Button Four" />
-      <Button onClick={() => onClickMainContent('Button Wow!')} text="Button Five" />
-      <Button onClick={() => onClickMainContent('Button Help')} text="Button Six" />
-      <Button onClick={() => onClickMainContent('Button Jesus!')} text="Button Seven" />
-      <div>{mainText}</div>
+      <Button onClick={() => onClickMainContent('home')} text="Home" />
+      <Button onClick={() => onClickMainContent('about')} text="About" />
+      
+      <div>Main Text within Header</div>
 
       <div>
         <h2>This is the 'MainText' component</h2>
-        <MainText />
+        <MainText onButtonClick={onClickMainContent} state={mainText} />
       </div>
       </div>
   );

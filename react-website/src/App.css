@@ -21,6 +21,17 @@
   }
 }
 
+.about {
+  background-color: #61dafb;
+}
+
+.home {
+  background-color: green;
+}
+.main-text {
+  background-color: red;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
