@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { MainContentContext } from "../App";
 import "../App.css";
 import { Button } from '../components/Button'
+import MainText from "./MainText";
 
 
 const Header = () => {
@@ -23,6 +24,11 @@ const Header = () => {
       <Button onClick={() => OnClickMainContent('Button Help')} text="Button Six" />
       <Button onClick={() => OnClickMainContent('Button Jesus!')} text="Button Seven" />
       <div>{mainText}</div>
+
+      <div>
+        <h2>This is the 'MainText' component</h2>
+        <MainText />
+      </div>
       </div>
   );
 };

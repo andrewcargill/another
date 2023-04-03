@@ -4,7 +4,7 @@ import '../App.css';
 import Home from "./Home";
 
 
-const Footer = () => {
+const MainText = () => {
 
     const{mainContent} = useContext(MainContentContext)
 
@@ -32,7 +32,7 @@ const Footer = () => {
     }
 
     return (
-        <div id="header">This is the footer
+        <div id="header">MainText Component
         <div>{renderContent()}</div>
         <p>{mainContent}</p>
         </div>
@@ -41,4 +41,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default MainText;
